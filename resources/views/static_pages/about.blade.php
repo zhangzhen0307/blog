@@ -1,7 +1,7 @@
 @extends('layouts.default_home')
 @section('title')
     about
-@stop
+@endsection
 @section('content')
     aboutcontent
-@stop
+@endsection
