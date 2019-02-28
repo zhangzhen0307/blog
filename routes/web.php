@@ -16,3 +16,4 @@ Route::get('/home','StaticPagesController@home')->name('home');
 Route::get('/help','StaticPagesController@help')->name('help');
 Route::get('/about','StaticPagesController@about')->name('about');
 Route::get('/signup','UsersController@signup')->name('signup');
+Route::resource('/users','UsersController');
