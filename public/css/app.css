@@ -10655,7 +10655,7 @@ a.text-dark:focus {
   }
 }
 
-.body {
-  background-color: white;
+body {
+  background-color: grey;
 }
 
