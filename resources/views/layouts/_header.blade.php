@@ -7,7 +7,7 @@
                     <a href="#" class="dropdown-toggle" id="dropdown-toggle1" data-toggle="dropdown">{{Auth::user()->name}}</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown-toggle1">
                         <a href="{{route('users.show',[Auth::user()])}}" class="dropdown-item">个人中心</a>
-                        <a href="#" class="dropdown-item">编辑资料</a>
+                        <a href="{{route('users.edit',[Auth::user()])}}" class="dropdown-item">编辑资料</a>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
                             <form action="{{route('logout')}}"method="post">
