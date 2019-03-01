@@ -29,7 +29,9 @@ class UsersController extends Controller
             'email' => 'required|email|unique:users|max:255',
             'password' => 'required|confirmed|min:6'
         ]);
-        $user=User::create(['name'=>$request->name,'email'=>$request->email,'password'=>$request->password]);
+        $user=User::create(['name'=>$request->name,'email'=>$request->email,'password'=>bcrypt($request->password)]);
+        $request->session()->flash('success', "欢迎");
+        Auth::login($user);
         return redirect()->route('users.show',$user);
     }
 
